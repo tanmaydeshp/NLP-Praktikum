@@ -118,6 +118,7 @@ def main(args):
 
     overall_stats = compute_stats(dists, n_overlaps, gold_lens, pred_lens)
     print_numbers(overall_stats)
+    return overall_stats
 
 
 if __name__ == "__main__":

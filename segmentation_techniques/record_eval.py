@@ -1,7 +1,7 @@
-def main(args):
-    import sentencepiece as spm
-    import pandas as pd
+import sentencepiece as spm
+import pandas as pd
 
+def train(args):
     # Train and save model
     train_df = pd.read_csv(args.train, sep="\t", header=None)
     training_txt = train_df[0].values.tolist()  + train_df[1].values.tolist()
@@ -12,6 +12,9 @@ def main(args):
     model_file = f"models/m_{args.model}"
     training_args = f'--input={training_txt_name} --model_prefix={model_file} --vocab_size={args.size} --model_type={"bpe" if args.model == "bpe" else "unigram"}'
     spm.SentencePieceTrainer.train(training_args)
+
+def encode(args):
+    model_file = f"models/m_{args.model}"
     spp = spm.SentencePieceProcessor()
     spp.load(f"{model_file}.model")
 
@@ -22,7 +25,6 @@ def main(args):
     for sentence in test_list:
         enc = spp.encode_as_pieces(sentence)
         encoded.append(enc)
-        print(enc)
         i += 1
         if i > 100:
             break
@@ -53,6 +55,7 @@ def main(args):
 
     df_guess.to_csv(args.guess, sep='\t', header=None, index = False)
 
+def evaluate(args):
     # Calculate evaluation and append to JSON file
     import evaluate, json, os
     stats = evaluate.main(args)
@@ -66,6 +69,11 @@ def main(args):
     data["data"] = sorted(data["data"], key=lambda x: x["model"])
     with open(args.output, 'w') as output_file:
         json.dump(data, output_file, indent=4)
+
+def main(args):
+    train(args)
+    encode(args)
+    evaluate(args)
 
 if __name__ == "__main__":
     import argparse

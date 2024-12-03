@@ -30,19 +30,24 @@ def main(args):
     df_guess = pd.read_csv(args.gold, sep='\t', header=None)
     i = 0
     for entry in test_list:
-        sent = ''
+        sent = ""
         list_sent = spp.encode_as_pieces(entry)
         list_sent = [str(x) for x in list_sent]
-        list_sent = [w.replace("▁", "") for w in list_sent]
         list_sent = [item for item in list_sent if item != ""]
         j = 0
-        length = len(list_sent)
-        for word in list_sent:
-            if j != length - 1:
-                sent += (word + ' @@')
-                j+=1
-            else :
-                sent += word
+        for morph in list_sent:
+            if morph == "▁":
+                list_sent[j + 1] = "▁" + list_sent[j + 1]
+                j +=1
+                continue 
+            elif "▁" in morph and j==0: 
+                sent += morph.replace("▁", "")
+            
+            elif "▁" in morph and j!=0:
+                sent+= morph.replace("▁", " ")
+            else:
+                sent += (" @@" + morph)  
+            j +=1  
         df_guess[1][i] = sent
         i+=1
 

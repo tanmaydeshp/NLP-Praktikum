@@ -1,8 +1,8 @@
 import sentencepiece as spm
 import pandas as pd
 
+# Train and save model
 def train(args):
-    # Train and save model
     train_df = pd.read_csv(args.train, sep="\t", header=None)
     training_txt = train_df[0].values.tolist()  + train_df[1].values.tolist()
     training_txt = [str(sent) for sent in training_txt]
@@ -13,6 +13,7 @@ def train(args):
     training_args = f'--input={training_txt_name} --model_prefix={model_file} --vocab_size={args.size} --model_type={"bpe" if args.model == "bpe" else "unigram"}'
     spm.SentencePieceTrainer.train(training_args)
 
+# Run encoding on trained model
 def encode(args):
     model_file = f"models/m_{args.model}"
     spp = spm.SentencePieceProcessor()
@@ -55,20 +56,24 @@ def encode(args):
 
     df_guess.to_csv(args.guess, sep='\t', header=None, index = False)
 
+# Calculate evaluation and append to JSON file
 def evaluate(args):
-    # Calculate evaluation and append to JSON file
     import evaluate, json, os
     stats = evaluate.main(args)
-    new_stats = {"model": f"{args.model}_{args.size}"}
+    model_name = f"{args.model}_{args.size}"
+    new_stats = {"model": model_name}
     new_stats.update(stats)
     data = {"data": []}
     if os.path.exists(args.output):
         with open(args.output, 'r') as output_file:
             data = json.load(output_file)
-    data["data"].append(new_stats)
-    data["data"] = sorted(data["data"], key=lambda x: x["model"])
-    with open(args.output, 'w') as output_file:
-        json.dump(data, output_file, indent=4)
+
+    # Skip adding data point if already present
+    if not any(item.get("model") == model_name for item in data["data"]):
+        data["data"].append(new_stats)
+        data["data"] = sorted(data["data"], key=lambda x: x["model"])
+        with open(args.output, 'w') as output_file:
+            json.dump(data, output_file, indent=4)
 
 def main(args):
     train(args)

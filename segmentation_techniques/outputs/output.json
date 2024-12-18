@@ -1,6 +1,13 @@
 {
     "data": [
         {
+            "model": "",
+            "distance": 33.13821138211382,
+            "precision": 5.470715162786262,
+            "recall": 18.53841803344914,
+            "f_measure": 8.448318712777414
+        },
+        {
             "model": "bpe_1000",
             "distance": 41.19674796747967,
             "precision": 23.783603907679876,
@@ -267,11 +274,46 @@
             "f_measure": 69.56
         },
         {
+            "model": "morfessor_len_1",
+            "distance": 33.13821138211382,
+            "precision": 5.470715162786262,
+            "recall": 18.53841803344914,
+            "f_measure": 8.448318712777414
+        },
+        {
+            "model": "morfessor_len_2",
+            "distance": 12.346341463414634,
+            "precision": 25.925842747097267,
+            "recall": 46.63488729094288,
+            "f_measure": 33.32515408264892
+        },
+        {
+            "model": "morfessor_len_3",
+            "distance": 6.991869918699187,
+            "precision": 46.1102875778239,
+            "recall": 62.83024965662115,
+            "f_measure": 53.18719649818754
+        },
+        {
+            "model": "morfessor_len_4",
+            "distance": 4.307859078590786,
+            "precision": 66.37475624889204,
+            "recall": 75.62818130403167,
+            "f_measure": 70.6999754527087
+        },
+        {
             "model": "morfessor_len_5",
             "distance": 2.707317073170732,
             "precision": 82.73687727063933,
             "recall": 80.03958956128302,
             "f_measure": 81.3658857107657
+        },
+        {
+            "model": "morfessor_standard",
+            "distance": 6.099186991869919,
+            "precision": 52.71824032993813,
+            "recall": 68.16272117637554,
+            "f_measure": 59.45384073291051
         },
         {
             "model": "ulm_1000",

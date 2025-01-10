@@ -1,13 +1,13 @@
 #create gold version tsv file
 import pandas as pd
 
-train = 'data/ntu-train-track2-uncovered.txt'
-gold = 'data/ntu.train.gold.tsv'
+train = 'segmentation_techniques\\data\\ntu-test-track2-uncovered.txt'
+gold = 'segmentation_techniques\\data\\ntu.test.gold.tsv'
 
 col1 = []
 col2 = []
 
-with open(train, 'r') as r:
+with open(train, 'r', encoding="utf-8") as r:
   for line in r:
     if line[0] == '\\' and line[1] == 't':
       col1.append(line[3:].rstrip())

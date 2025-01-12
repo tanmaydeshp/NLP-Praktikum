@@ -90,6 +90,6 @@ if __name__ == "__main__":
     parser.add_argument("--gold", help="Path to gold standard", default="data/eng.sentence.test.gold.tsv", required=False, type=str)
     parser.add_argument("--guess", help="Path to model output", default="outputs/eng.sentence.test.guess.tsv", required=False, type=str)
     parser.add_argument("--category", help="Morphological category", default=False, action="store_true")
-    parser.add_argument("--output", help="Path to stat output", default="outputs/output.json", required=False, type=str)
+    parser.add_argument("--output", help="Path to stat output", default="outputs/eng.output.json", required=False, type=str)
     opt = parser.parse_args()
     main(opt)

@@ -1,0 +1,46 @@
+{
+    "data": [
+        {
+            "model": "morfessor_len_1",
+            "distance": 33.25252525252525,
+            "precision": 5.446985446985447,
+            "recall": 14.467145223633352,
+            "f_measure": 7.91421235462921
+        },
+        {
+            "model": "morfessor_len_2",
+            "distance": 12.454545454545455,
+            "precision": 41.21779859484778,
+            "recall": 58.31032578685809,
+            "f_measure": 48.296364052138124
+        },
+        {
+            "model": "morfessor_len_3",
+            "distance": 9.202020202020202,
+            "precision": 51.07018417122947,
+            "recall": 56.65378244064053,
+            "f_measure": 53.717277486911
+        },
+        {
+            "model": "morfessor_len_4",
+            "distance": 9.070707070707071,
+            "precision": 55.24096385542169,
+            "recall": 50.63500828271673,
+            "f_measure": 52.83779890521464
+        },
+        {
+            "model": "morfessor_len_5",
+            "distance": 9.313131313131313,
+            "precision": 61.978740801308255,
+            "recall": 41.85532854776367,
+            "f_measure": 49.96704021094265
+        },
+        {
+            "model": "morfessor_standard",
+            "distance": 10.252525252525253,
+            "precision": 46.672785681505275,
+            "recall": 56.156819436775265,
+            "f_measure": 50.97744360902256
+        }
+    ]
+}

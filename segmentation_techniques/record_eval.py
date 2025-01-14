@@ -3,14 +3,16 @@ import pandas as pd
 
 # Train and save model
 def train(args):
+    '''
     train_df = pd.read_csv(args.train, sep="\t", header=None)
     training_txt = train_df[0].values.tolist()  + train_df[1].values.tolist()
     training_txt = [str(sent) for sent in training_txt]
     training_txt_name = f'data/{args.language}.train.txt'
-    with open(training_txt_name, 'w', encoding='utf-8') as file:
-        file.writelines(f"{line}\n" for line in training_txt)
+    with open(args.train, 'w', encoding='utf-8') as file:
+        file.writelines(f"{line}\n" for line in args.train)
+    '''
     model_file = f"models/m_{args.language}_{args.model}"
-    training_args = f'--input={training_txt_name} --model_prefix={model_file} --vocab_size={args.size} --model_type={"bpe" if args.model == "bpe" else "unigram"}'
+    training_args = f'--input={args.train} --model_prefix={model_file} --vocab_size={args.size} --model_type={"bpe" if args.model == "bpe" else "unigram"}'
     spm.SentencePieceTrainer.train(training_args)
 
 # Run encoding on trained model
@@ -71,7 +73,6 @@ def evaluate(args):
     # Skip adding data point if already present
     if not any(item.get("model") == model_name for item in data["data"]):
         data["data"].append(new_stats)
-        data["data"] = sorted(data["data"], key=lambda x: x["model"])
         with open(args.output, 'w') as output_file:
             json.dump(data, output_file, indent=4)
 
@@ -86,7 +87,7 @@ if __name__ == "__main__":
     parser.add_argument("--model", help="Model to use, bpe or ulm", required=True, type=str)
     parser.add_argument("--language", help="Language dataset to use", required=True, type=str)
     parser.add_argument("--size", help="Vocabulary size to train model on", required=True, type=int)
-    parser.add_argument("--train", help="Path to training data", default="data/eng.sentence.train.tsv", required=False, type=str)
+    parser.add_argument("--train", help="Path to training data", default="data/training_bpe.txt", required=False, type=str)
     parser.add_argument("--test", help="Path to test data", default="data/eng.sentence.test.tsv", required=False, type=str)
     parser.add_argument("--gold", help="Path to gold standard", default="data/eng.sentence.test.gold.tsv", required=False, type=str)
     parser.add_argument("--guess", help="Path to model output", default="outputs/eng.sentence.test.guess.tsv", required=False, type=str)

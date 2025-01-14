@@ -6,16 +6,16 @@ def train(args):
     train_df = pd.read_csv(args.train, sep="\t", header=None)
     training_txt = train_df[0].values.tolist()  + train_df[1].values.tolist()
     training_txt = [str(sent) for sent in training_txt]
-    training_txt_name = 'data/training_' + args.model + '.txt'
+    training_txt_name = f'data/{args.language}.train.txt'
     with open(training_txt_name, 'w', encoding='utf-8') as file:
         file.writelines(f"{line}\n" for line in training_txt)
-    model_file = f"models/m_{args.model}"
+    model_file = f"models/m_{args.language}_{args.model}"
     training_args = f'--input={training_txt_name} --model_prefix={model_file} --vocab_size={args.size} --model_type={"bpe" if args.model == "bpe" else "unigram"}'
     spm.SentencePieceTrainer.train(training_args)
 
 # Run encoding on trained model
 def encode(args):
-    model_file = f"models/m_{args.model}"
+    model_file = f"models/m_{args.language}_{args.model}"
     spp = spm.SentencePieceProcessor()
     spp.load(f"{model_file}.model")
 
@@ -84,6 +84,7 @@ if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description='Script to train, evaluate and record eval for BPE or ULM')
     parser.add_argument("--model", help="Model to use, bpe or ulm", required=True, type=str)
+    parser.add_argument("--language", help="Language dataset to use", required=True, type=str)
     parser.add_argument("--size", help="Vocabulary size to train model on", required=True, type=int)
     parser.add_argument("--train", help="Path to training data", default="data/eng.sentence.train.tsv", required=False, type=str)
     parser.add_argument("--test", help="Path to test data", default="data/eng.sentence.test.tsv", required=False, type=str)

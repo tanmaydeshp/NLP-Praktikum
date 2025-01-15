@@ -47,7 +47,7 @@ for language, vocab_sizes in language_data.items():
                      "--train",     f"data/{language}.train.txt", 
                      "--test",      f"data/{language}.test.gold.tsv", 
                      "--gold",      f"data/{language}.test.gold.tsv", 
-                     "--guess",     f"data/{language}.sentence.test.{model}_guess.tsv", 
+                     "--guess",     f"outputs/{language}.sentence.test.{model}_guess.tsv", 
                      "--output",    f"outputs/{language}.output.json"]
                 )
             except subprocess.CalledProcessError as e:

@@ -309,6 +309,13 @@
             "f_measure": 81.3658857107657
         },
         {
+            "model": "morfessor_len_6",
+            "distance": 2.9257452574525744,
+            "precision": 83.31487122680699,
+            "recall": 72.92154803264118,
+            "f_measure": 77.77251184834124
+        },
+        {
             "model": "morfessor_standard",
             "distance": 6.099186991869919,
             "precision": 52.71824032993813,

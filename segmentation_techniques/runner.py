@@ -1,5 +1,6 @@
 import subprocess
 import sys
+
 # Max vocab sizes for BPE and ULM for each language according to sentencepiece error message
 language_data = {
     "eng": {
@@ -26,6 +27,21 @@ language_data = {
         "bpe": 9187,
         "ulm": 1980,
         "min": 70
+    },
+    "arp": {
+        "bpe": 66925, 
+        "ulm": 20392,
+        "min": 57
+    },
+    "nyb": {
+        "bpe": 5268,
+        "ulm": 1394,
+        "min": 68
+    },
+    "usp": {
+        "bpe": 14556,
+        "ulm": 4086,
+        "min": 61
     }
 }
 

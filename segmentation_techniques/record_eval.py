@@ -3,14 +3,6 @@ import pandas as pd
 
 # Train and save model
 def train(args):
-    '''
-    train_df = pd.read_csv(args.train, sep="\t", header=None)
-    training_txt = train_df[0].values.tolist()  + train_df[1].values.tolist()
-    training_txt = [str(sent) for sent in training_txt]
-    training_txt_name = f'data/{args.language}.train.txt'
-    with open(args.train, 'w', encoding='utf-8') as file:
-        file.writelines(f"{line}\n" for line in args.train)
-    '''
     model_file = f"models/m_{args.language}_{args.model}"
     training_args = f'--input={args.train} --model_prefix={model_file} --vocab_size={args.size} --model_type={"bpe" if args.model == "bpe" else "unigram"}'
     spm.SentencePieceTrainer.train(training_args)

@@ -1,8 +1,8 @@
 #create gold version tsv file
 import pandas as pd
 
-train = 'segmentation_techniques\\data\\ntu-test-track2-uncovered.txt'
-gold = 'segmentation_techniques\\data\\ntu.test.gold.tsv'
+train = 'data/nyb-train-track2-uncovered'
+gold = 'data/nyb.train.gold.tsv'
 
 col1 = []
 col2 = []

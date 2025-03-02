@@ -1,6 +1,6 @@
 import pandas as pd
 
-f = 'ddo.sentence.test.ulm_guess.tsv'
+f = 'outputs/git.sentence.test.bpe_guess.tsv'
 
 df = pd.read_csv(f,sep='\t',header=None)
 series = df[1].astype(str)

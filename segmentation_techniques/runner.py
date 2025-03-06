@@ -4,9 +4,9 @@ import sys
 # Max vocab sizes for BPE and ULM for each language according to sentencepiece error message
 language_data = {
     "eng": {
-        "bpe": 8000,
-        "ulm": 8000,
-        "min": 1000
+        "bpe": 46918,
+        "ulm": 11175,
+        "min": 88
     },
     "ddo": {
         "bpe": 19443,
@@ -46,6 +46,8 @@ language_data = {
 }
 
 for language, vocab_sizes in language_data.items():
+        if language != "eng":
+             break 
         min_vocab_size = vocab_sizes["min"]
         for model, max_vocab in vocab_sizes.items():
             if model == "min":
@@ -66,8 +68,8 @@ for language, vocab_sizes in language_data.items():
                         "--language",  language, 
                         "--size",      str(vocab_size), 
                         "--train",     f"data/{language}.train.txt", 
-                        "--test",      f"data/{language}.test.gold.tsv", 
-                        "--gold",      f"data/{language}.test.gold.tsv", 
+                        "--test",      f"data/{language}.sentence.test.gold.tsv", 
+                        "--gold",      f"data/{language}.sentence.test.gold.tsv", 
                         "--guess",     f"outputs/{language}.sentence.test.{model}_guess.tsv", 
                         "--output",    f"outputs/{language}.output.json"]
                     )

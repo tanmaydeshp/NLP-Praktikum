@@ -323,242 +323,74 @@
             "f_measure": 59.45384073291051
         },
         {
-            "model": "morfessor_training_len_1",
-            "distance": 44.513582265830834,
-            "precision": 5.2201946112212,
-            "recall": 17.368030032423604,
-            "f_measure": 8.027589437693512
+            "model": "morfessor_types_10392",
+            "distance": 3.7956639566395665,
+            "precision": 70.96631369221119,
+            "recall": 77.70057364466349,
+            "f_measure": 74.18092060859671
         },
         {
-            "model": "morfessor_training_len_2",
-            "distance": 14.853638593622241,
-            "precision": 29.630228055899106,
-            "recall": 49.624840711056,
-            "f_measure": 37.10539579064318
+            "model": "morfessor_types_12124",
+            "distance": 2.7804878048780486,
+            "precision": 81.50727012082736,
+            "recall": 80.39104791144865,
+            "f_measure": 80.94531106998312
         },
         {
-            "model": "morfessor_training_len_3",
-            "distance": 8.121740710456981,
-            "precision": 50.670259972585555,
-            "recall": 64.38471416552274,
-            "f_measure": 56.71011148308252
+            "model": "morfessor_types_13856",
+            "distance": 2.7116531165311653,
+            "precision": 83.42248277632761,
+            "recall": 78.75494869516038,
+            "f_measure": 81.02154894748874
         },
         {
-            "model": "morfessor_training_len_4",
-            "distance": 5.028799854637958,
-            "precision": 70.44598839742267,
-            "recall": 75.57848332324708,
-            "f_measure": 72.92203692363199
+            "model": "morfessor_types_15588",
+            "distance": 2.7934959349593496,
+            "precision": 84.3202102115707,
+            "recall": 75.1878484285368,
+            "f_measure": 79.49260042283298
         },
         {
-            "model": "morfessor_training_len_5",
-            "distance": 3.567366221495412,
-            "precision": 85.2541643939076,
-            "recall": 79.97608820794403,
-            "f_measure": 82.5308254910373
+            "model": "morfessor_types_1732",
+            "distance": 9.604336043360433,
+            "precision": 34.50909276665305,
+            "recall": 54.58107780560717,
+            "f_measure": 42.2839795950302
         },
         {
-            "model": "morfessor_training_len_6",
-            "distance": 4.244208231125647,
-            "precision": 82.6092189192442,
-            "recall": 70.9206039941549,
-            "f_measure": 76.31996950250971
-        },
-        {
-            "model": "morfessor_training_standard",
-            "distance": 7.191060234396293,
-            "precision": 55.72676304981319,
-            "recall": 68.02658833832726,
-            "f_measure": 61.2654368854602
-        },
-        {
-            "model": "morfessor_training_types_10500",
-            "distance": 4.063141637140002,
-            "precision": 78.82014290376158,
-            "recall": 79.62134742456223,
-            "f_measure": 79.2187194047386
-        },
-        {
-            "model": "morfessor_training_types_11500",
-            "distance": 3.7099118742618336,
-            "precision": 82.69923969345409,
-            "recall": 80.59602355754329,
-            "f_measure": 81.63408708652588
-        },
-        {
-            "model": "morfessor_training_types_12500",
-            "distance": 3.538929771963296,
-            "precision": 85.29597190598508,
-            "recall": 80.54534630277446,
-            "f_measure": 82.8526168219569
-        },
-        {
-            "model": "morfessor_training_types_13500",
-            "distance": 3.6673934768783503,
-            "precision": 85.21439977707996,
-            "recall": 78.24076124124834,
-            "f_measure": 81.57881911758294
-        },
-        {
-            "model": "morfessor_training_types_14500",
-            "distance": 3.8823475969837378,
-            "precision": 84.53115887007142,
-            "recall": 75.58881557907374,
-            "f_measure": 79.81028226487236
-        },
-        {
-            "model": "morfessor_training_types_1500",
-            "distance": 12.595439265921685,
-            "precision": 34.85079898432578,
-            "recall": 53.888618282188666,
-            "f_measure": 42.32755772229533
-        },
-        {
-            "model": "morfessor_training_types_15500",
-            "distance": 4.121013900245298,
-            "precision": 83.43621399176955,
-            "recall": 73.02100400005904,
-            "f_measure": 77.88194362449916
-        },
-        {
-            "model": "morfessor_training_types_16500",
-            "distance": 4.335150358862542,
-            "precision": 82.07656847377828,
-            "recall": 69.81800469379621,
-            "f_measure": 75.45262642966145
-        },
-        {
-            "model": "morfessor_training_types_2500",
-            "distance": 10.112383028981558,
-            "precision": 42.857844823350206,
-            "recall": 60.078623546719015,
-            "f_measure": 50.02775723582998
-        },
-        {
-            "model": "morfessor_training_types_3500",
-            "distance": 8.889433996547652,
-            "precision": 47.578573207958264,
-            "recall": 62.95984688580889,
-            "f_measure": 54.199068191444304
-        },
-        {
-            "model": "morfessor_training_types_4500",
-            "distance": 8.111928772599255,
-            "precision": 50.719485815740306,
-            "recall": 64.37339788533164,
-            "f_measure": 56.736533762350696
-        },
-        {
-            "model": "morfessor_training_types_500",
-            "distance": 23.47706005269374,
-            "precision": 15.399115757457096,
-            "recall": 33.279704005471174,
-            "f_measure": 21.055482316538857
-        },
-        {
-            "model": "morfessor_training_types_5500",
-            "distance": 7.217134550740438,
-            "precision": 55.242439642168605,
-            "recall": 67.38943256235024,
-            "f_measure": 60.7143411239292
-        },
-        {
-            "model": "morfessor_training_types_6500",
-            "distance": 6.255655491959662,
-            "precision": 61.68376499726455,
-            "recall": 71.56120385540746,
-            "f_measure": 66.2563775510204
-        },
-        {
-            "model": "morfessor_training_types_7500",
-            "distance": 5.96865630962115,
-            "precision": 63.18891861569,
-            "recall": 72.04731189144243,
-            "f_measure": 67.32798911231829
-        },
-        {
-            "model": "morfessor_training_types_8500",
-            "distance": 5.299990914872354,
-            "precision": 67.8018920919118,
-            "recall": 74.82570468444798,
-            "f_measure": 71.14085169185286
-        },
-        {
-            "model": "morfessor_training_types_9500",
-            "distance": 4.525483783047152,
-            "precision": 74.69996420295043,
-            "recall": 78.03018002725747,
-            "f_measure": 76.32876514540796
-        },
-        {
-            "model": "morfessor_types_10384",
-            "distance": 3.778319783197832,
-            "precision": 71.5473406821809,
-            "recall": 77.87428294417064,
-            "f_measure": 74.57686132657601
-        },
-        {
-            "model": "morfessor_types_13412",
-            "distance": 2.640650406504065,
-            "precision": 83.97548536407663,
-            "recall": 79.15488405914196,
-            "f_measure": 81.49395886622163
-        },
-        {
-            "model": "morfessor_types_1731",
-            "distance": 9.492140921409215,
-            "precision": 34.98270339525945,
-            "recall": 55.150682717944576,
-            "f_measure": 42.8103294187742
-        },
-        {
-            "model": "morfessor_types_17324",
-            "distance": 3.113821138211382,
-            "precision": 82.25004779200917,
+            "model": "morfessor_types_17320",
+            "distance": 3.1127371273712736,
+            "precision": 82.25791033362012,
             "recall": 69.52411731437344,
-            "f_measure": 75.35356188974998
+            "f_measure": 75.35686137139854
         },
         {
-            "model": "morfessor_types_2237",
-            "distance": 8.787533875338754,
-            "precision": 37.39856865405592,
-            "recall": 56.78678193423285,
-            "f_measure": 45.09712709132032
+            "model": "morfessor_types_3464",
+            "distance": 7.259078590785908,
+            "precision": 44.78935058184863,
+            "recall": 62.66058010826533,
+            "f_measure": 52.23878083691168
         },
         {
-            "model": "morfessor_types_2889",
-            "distance": 7.964769647696477,
-            "precision": 41.511803114013055,
-            "recall": 60.0993778783227,
-            "f_measure": 49.10549247425402
+            "model": "morfessor_types_5196",
+            "distance": 6.5018970189701895,
+            "precision": 49.20572003536909,
+            "recall": 65.19350408014866,
+            "f_measure": 56.082431234904696
         },
         {
-            "model": "morfessor_types_3731",
-            "distance": 7.36639566395664,
-            "precision": 43.82441336261704,
-            "recall": 61.26282620990547,
-            "f_measure": 51.09673506519761
+            "model": "morfessor_types_6928",
+            "distance": 5.540921409214092,
+            "precision": 56.044062854365784,
+            "recall": 69.8796154156904,
+            "f_measure": 62.20176558370341
         },
         {
-            "model": "morfessor_types_4819",
-            "distance": 6.7821138211382115,
-            "precision": 47.06641457339216,
-            "recall": 63.35541730629393,
-            "f_measure": 54.009470512268614
-        },
-        {
-            "model": "morfessor_types_6225",
-            "distance": 5.68130081300813,
-            "precision": 55.02064594603246,
-            "recall": 69.43928254019552,
-            "f_measure": 61.394767389945535
-        },
-        {
-            "model": "morfessor_types_8040",
-            "distance": 5.0644986449864495,
-            "precision": 59.53106682297773,
-            "recall": 71.7984972125717,
-            "f_measure": 65.09183467926532
+            "model": "morfessor_types_8660",
+            "distance": 4.775067750677507,
+            "precision": 62.15023091551209,
+            "recall": 73.9355255716248,
+            "f_measure": 67.53256337404525
         },
         {
             "model": "ulm_10200",

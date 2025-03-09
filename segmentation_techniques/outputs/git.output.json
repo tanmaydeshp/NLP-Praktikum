@@ -303,24 +303,31 @@
         },
         {
             "model": "morfessor_types_107",
-            "distance": 28.0,
-            "precision": 18.5,
-            "recall": 37.48191027496382,
-            "f_measure": 24.772835963653755
+            "distance": 28.27027027027027,
+            "precision": 16.5,
+            "recall": 33.42981186685962,
+            "f_measure": 22.094691535150645
         },
         {
-            "model": "morfessor_types_123",
-            "distance": 24.64864864864865,
-            "precision": 21.65032679738562,
+            "model": "morfessor_types_120",
+            "distance": 24.7027027027027,
+            "precision": 21.065182829888712,
             "recall": 38.35021707670043,
-            "f_measure": 27.676240208877285
+            "f_measure": 27.19343252950231
         },
         {
-            "model": "morfessor_types_140",
-            "distance": 13.0,
-            "precision": 52.959028831562975,
-            "recall": 50.506512301013025,
-            "f_measure": 51.70370370370371
+            "model": "morfessor_types_133",
+            "distance": 20.83783783783784,
+            "precision": 26.0,
+            "recall": 39.507959479015916,
+            "f_measure": 31.361286616886847
+        },
+        {
+            "model": "morfessor_types_146",
+            "distance": 11.91891891891892,
+            "precision": 54.36893203883495,
+            "recall": 48.62518089725036,
+            "f_measure": 51.336898395721924
         },
         {
             "model": "morfessor_types_159",
@@ -330,46 +337,39 @@
             "f_measure": 23.79182156133829
         },
         {
-            "model": "morfessor_types_48",
-            "distance": 50.648648648648646,
-            "precision": 6.606217616580311,
-            "recall": 22.14182344428365,
-            "f_measure": 10.176255404057201
+            "model": "morfessor_types_42",
+            "distance": 53.432432432432435,
+            "precision": 6.273215022699134,
+            "recall": 21.99710564399421,
+            "f_measure": 9.762363519588954
         },
         {
             "model": "morfessor_types_55",
-            "distance": 48.027027027027025,
-            "precision": 7.262065854758683,
-            "recall": 23.299565846599133,
-            "f_measure": 11.07290233837689
+            "distance": 47.45945945945946,
+            "precision": 7.695810564663024,
+            "recall": 24.457308248914618,
+            "f_measure": 11.707655005195706
         },
         {
-            "model": "morfessor_types_63",
-            "distance": 46.945945945945944,
-            "precision": 7.916666666666667,
-            "recall": 24.746743849493487,
-            "f_measure": 11.995790950543668
+            "model": "morfessor_types_68",
+            "distance": 42.37837837837838,
+            "precision": 9.502262443438914,
+            "recall": 27.35166425470333,
+            "f_measure": 14.104477611940297
         },
         {
-            "model": "morfessor_types_72",
-            "distance": 41.7027027027027,
-            "precision": 8.760245901639344,
-            "recall": 24.746743849493487,
-            "f_measure": 12.939841089670827
-        },
-        {
-            "model": "morfessor_types_82",
-            "distance": 37.432432432432435,
-            "precision": 11.17908787541713,
-            "recall": 29.088277858176557,
-            "f_measure": 16.151064684612297
+            "model": "morfessor_types_81",
+            "distance": 35.16216216216216,
+            "precision": 12.718786464410735,
+            "recall": 31.54848046309696,
+            "f_measure": 18.12889812889813
         },
         {
             "model": "morfessor_types_94",
-            "distance": 32.270270270270274,
-            "precision": 14.67425679949399,
-            "recall": 33.57452966714906,
-            "f_measure": 20.422535211267608
+            "distance": 28.64864864864865,
+            "precision": 16.748080949057922,
+            "recall": 34.73227206946454,
+            "f_measure": 22.598870056497177
         },
         {
             "model": "ulm_101",
